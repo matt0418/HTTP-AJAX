@@ -1,0 +1,13 @@
+.home {
+    display: flex;
+    justify-content: center;
+}
+
+.home div {
+    border: 1px solid red;
+    padding: 10% 20%;
+    background: lightblue;
+    text-align: center;
+    width: 80%;
+    margin-left: -10%;
+}

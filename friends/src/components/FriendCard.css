@@ -1,0 +1,14 @@
+.card {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    margin: 5%;
+    padding: 2%;
+    background: silver;
+}
+
+.card p {
+    color: black;
+}
