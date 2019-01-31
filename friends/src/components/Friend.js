@@ -29,12 +29,19 @@ class Friend extends React.Component {
     }
 
     render(props) {
+        
         if (!this.state.friend) {
             return <h1>Loading Friend</h1>
         }
         return(
             <div className = "one-card">
-                <FriendCard friend={this.state.friend} deleteFriend={this.props.deleteFriend}/>
+                <FriendCard 
+                    friend={this.state.friend} 
+                    deleteFriend={this.props.deleteFriend}
+                    populateForm={this.props.populateForm}
+                />
+                {/* <button onClick={e => this.props.populateForm(e, this.props.id)}>Update Friend</button>
+                <button onClick={e => this.props.deleteFriend(e, this.props.id)}>Delete Friend</button> */}
             </div>
              
         )
