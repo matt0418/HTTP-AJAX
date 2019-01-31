@@ -10,6 +10,7 @@ const FriendCard = (props) => {
                 <p>Age: {props.friend.age}</p>
                 <p>Email: {props.friend.email}</p>
             </NavLink>
+            <button onClick={e => props.deleteFriend(e, props.friend.id)}>Delete Friend</button>
         </div>
     )
 }

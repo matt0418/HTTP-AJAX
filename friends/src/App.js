@@ -62,7 +62,17 @@ class App extends Component {
     })
   }
 
-
+  deleteFriend = (e, friendId) => {
+    e.preventDefault();
+    axios.delete(`http://localhost:5000/friends/${friendId}`)
+      .then(res => {
+        this.setState({ friends: res.data })
+        this.props.history.push(`/`)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
 
 
 
@@ -75,7 +85,11 @@ class App extends Component {
         <Route exact path = "/" render={props => <FriendsList {...props} friendsList={friendsList}/>}/>
         <Route 
         path="/friends/:id" 
-        render={props => <Friend {...props}/>} />
+        render={props => 
+          <Friend 
+            {...props}
+            deleteFriend={this.deleteFriend}
+          />} />
         <Route 
           path="/friend-form" 
           render={props => 

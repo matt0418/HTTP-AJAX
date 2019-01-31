@@ -14,13 +14,11 @@ class Friend extends React.Component {
     componentDidMount() {
         const id = this.props.match.params.id;
         this.fetchID(id)
-        console.log(id)
     }
 
     fetchID = id => {
         axios.get(`http://localhost:5000/friends/${id}`)
         .then(res => {
-            
             this.setState({
                 friend: res.data
             })
@@ -30,13 +28,13 @@ class Friend extends React.Component {
         })
     }
 
-    render() {
+    render(props) {
         if (!this.state.friend) {
             return <h1>Loading Friend</h1>
         }
         return(
             <div className = "one-card">
-                <FriendCard friend={this.state.friend}/>
+                <FriendCard friend={this.state.friend} deleteFriend={this.props.deleteFriend}/>
             </div>
              
         )
