@@ -29,7 +29,7 @@ class Friend extends React.Component {
     }
 
     render(props) {
-        
+        console.log(this.props)
         if (!this.state.friend) {
             return <h1>Loading Friend</h1>
         }
@@ -37,11 +37,11 @@ class Friend extends React.Component {
             <div className = "one-card">
                 <FriendCard 
                     friend={this.state.friend} 
-                    deleteFriend={this.props.deleteFriend}
-                    populateForm={this.props.populateForm}
+                    // deleteFriend={this.props.deleteFriend}
+                    // populateForm={this.props.populateForm}
                 />
-                {/* <button onClick={e => this.props.populateForm(e, this.props.id)}>Update Friend</button>
-                <button onClick={e => this.props.deleteFriend(e, this.props.id)}>Delete Friend</button> */}
+                <button onClick={e => this.props.populateForm(e, this.state.friend.id)}>Update Friend</button>
+                <button onClick={e => this.props.deleteFriend(e, this.state.friend.id)}>Delete Friend</button>
             </div>
              
         )

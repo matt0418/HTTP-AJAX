@@ -33,19 +33,19 @@ import FriendForm from './FriendForm'
 //         })
 //     }
 
-//     addFriend = e => {
-//         e.preventDefault();
-//         axios.post(`http://localhost:5000/friends`, this.state.friend)
-//         .then(res => {
-//             this.setState({
-//                 friends: res.data
-//             })
-//             this.props.history.push(`/`)
-//         })
-//         .catch(err => {
-//             console.log(err)
-//         })
-//     }
+    // addFriend = e => {
+    //     e.preventDefault();
+    //     axios.post(`http://localhost:5000/friends`, this.state.friend)
+    //     .then(res => {
+    //         this.setState({
+    //             friends: res.data
+    //         })
+    //         this.props.history.push(`/`)
+    //     })
+    //     .catch(err => {
+    //         console.log(err)
+    //     })
+    // }
 
 
 //     render() {
@@ -62,6 +62,7 @@ import FriendForm from './FriendForm'
 // }
 
 function FriendsList(props) {
+    console.log(props)
     return(
         <div className="card-page">
                 {props.friendsList.map((friend, ind )=> (
