@@ -49,8 +49,8 @@ class App extends Component {
     })
   }
 
-  addFriend = e => {
-    e.preventDefault();
+  addFriend = () => {
+    // e.preventDefault();
     axios.post(`http://localhost:5000/friends`, this.state.friend)
     .then(res => {
         this.setState({

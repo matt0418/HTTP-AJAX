@@ -2,6 +2,7 @@ import React from 'react'
 import './FriendForm.css';
 
 function FriendForm(props) {
+    console.log(props)
     function handleSubmit(e) {
         e.preventDefault();
         if (props.isUpdating) {

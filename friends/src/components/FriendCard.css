@@ -8,6 +8,7 @@
     padding: 2%;
     background: silver;
     border-radius: 15px;
+    box-shadow: 3px 5px;
 }
 
 .card p {
