@@ -4,13 +4,16 @@ import './NavBar.css';
 
 function NavBar(props) {
     return(
-        <div className="home">
-            <NavLink to="/">
-                <div>Go Home</div>
-            </NavLink>
-            <NavLink to="/friend-form">
-                <div className="add">{props.isUpdating ? "Update Friend" : "Add Friend"}</div>
-            </NavLink>
+        <div>
+            <h1>Friends</h1>
+            <div  className="home">
+                <NavLink to="/">
+                    <div>Go Home</div>
+                </NavLink>
+                <NavLink to="/friend-form">
+                    <div className="add">{props.isUpdating ? "Update Friend" : "Add Friend"}</div>
+                </NavLink>
+            </div>
         </div>
     )
 }
