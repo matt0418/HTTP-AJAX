@@ -2,6 +2,7 @@ h1 {
     text-align: center;
     font-size: 40px;
     color: cornflowerblue;
+    font-weight: bold;
 }
 
 .home {
@@ -18,6 +19,7 @@ h1 {
     width: 80%;
     margin-left: -10%;
     color: black;
+    font-weight: bold;
     
 }
 

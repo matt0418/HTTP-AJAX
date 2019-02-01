@@ -16,4 +16,7 @@
     border-radius: 10px;
     background: silver;
     border: 1px solid red;
+    font-weight: bold;
+    font-size: 14px;
+    color: red;
 }
