@@ -1,4 +1,5 @@
 import React from 'react'
+import './FriendForm.css';
 
 function FriendForm(props) {
     function handleSubmit(e) {
@@ -10,7 +11,7 @@ function FriendForm(props) {
         }
     }
     return(
-        <div>
+        <div className="friend-form">
             <h2>{props.isUpdating ? "Update Friend" : "Add Friend"}</h2>
             <form onSubmit={handleSubmit}>
                 <input
