@@ -40,8 +40,11 @@ class Friend extends React.Component {
                     // deleteFriend={this.props.deleteFriend}
                     // populateForm={this.props.populateForm}
                 />
-                <button onClick={e => this.props.populateForm(e, this.state.friend.id)}>Update Friend</button>
-                <button onClick={e => this.props.deleteFriend(e, this.state.friend.id)}>Delete Friend</button>
+                <div className="buttons">
+                    <button onClick={e => this.props.populateForm(e, this.state.friend.id)}>Update Friend</button>
+                    <button onClick={e => this.props.deleteFriend(e, this.state.friend.id)}>Delete Friend</button>
+                </div>
+                
             </div>
              
         )

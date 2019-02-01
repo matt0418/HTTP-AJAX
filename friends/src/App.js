@@ -104,7 +104,12 @@ class App extends Component {
     return (
       <div className="App">
         {/* <FriendsList /> */}
-        <Route path = "/" component={NavBar}/>
+        <Route 
+          path = "/" 
+          render={props => <NavBar 
+          {...props}
+          isUpdating={this.state.isUpdating}
+          />}/>
         <Route exact path = "/" render={props => <FriendsList {...props} friendsList={friendsList}/>}/>
         <Route 
         path="/friends/:id" 
