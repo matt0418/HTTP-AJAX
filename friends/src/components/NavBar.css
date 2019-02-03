@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.home div {
+    border: 1px solid red;
+    padding: 10px 20px;
+    background: lightblue;
+    text-align: center;
+    width: 80%;
+    margin-left: -10%;
+    color: black;
+    font-weight: bold;
+    
+}
+
+.home .add {
+    margin-left: 50px;
+}
